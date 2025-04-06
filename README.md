@@ -1,6 +1,7 @@
 # Beat It!
-1. Go to frontend folder locally
-2. npm run install
-3. npm install @tonejs/midi
-4. npm run dev
-5. Go to http://localhost:5173/
+1. Clone this repo
+2. Go to frontend folder locally
+3. npm run install
+4. npm install @tonejs/midi
+5. npm run dev
+6. Go to http://localhost:5173/
