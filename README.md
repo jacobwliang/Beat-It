@@ -1,4 +1,3 @@
-# Beat It!
 ![logo](https://github.com/user-attachments/assets/fe933953-df7d-4ee0-ab09-7603c89ed7c1)
 
 ## Description:
