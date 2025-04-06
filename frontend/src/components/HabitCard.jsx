@@ -91,11 +91,11 @@ function HabitCard({ habit }) {
         return "Master";
     }, [consistencyScore]);
     
-    // Generate a consistent player number based on the habit ID
-    const playerNum = useMemo(() => {
-        const sum = habitId.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
-        return (sum % 6) + 1;
-    }, [habitId]);
+    // Generate a consistent player number based on the task name
+        const playerNum = useMemo(() => {
+            const sum = habitName.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+            return (sum % 6) + 1;
+        }, [habitName]);
     
     // Format time as MM:SS or HH:MM:SS
     const formatTime = () => {
@@ -215,7 +215,7 @@ function HabitCard({ habit }) {
                 <div className="absolute top-0 flex justify-between w-full py-3 px-6 text-[#8F4F4F] text-4xl">
                     <div>
                         <p className="truncate max-w-48">{habitName}</p>
-                        <p className="text-sm mt-1 text-white">{level}</p>
+                        <p className="text-[24px] mt-1 text-white">{level}</p>
                         <p className="text-sm mt-1">{formatDaysOfWeek()}</p>
                     </div>
                     <p className={`${isRunning && time <= 60 ? 'animate-pulse' : ''}`}>{formatTime()}</p>
