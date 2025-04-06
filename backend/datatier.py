@@ -2,9 +2,11 @@ from pymongo import MongoClient
 from pymongo.errors import DuplicateKeyError
 from datetime import datetime, timedelta
 import sys
+import os
 
-password = "beatit2027"
-uri = f"mongodb+srv://kidustessma2027:{password}@cluster0.z247gsx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+uri = os.getenv('MONGODB_URI')
+if not uri:
+    raise ValueError("MONGODB_URI environment variable is not set")
 
 client = MongoClient(uri)
 db = client['beatapp']
