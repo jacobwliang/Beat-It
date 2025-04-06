@@ -79,11 +79,11 @@ function TaskCard({ task }) {
     }, [completionPercentage]);
     
 
-    // Generate a consistent player number based on the task ID
+    // Generate a consistent player number based on the task name
     const playerNum = useMemo(() => {
-        const sum = taskId.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+        const sum = taskName.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
         return (sum % 6) + 1;
-    }, [taskId]);
+    }, [taskName]);
 
     
     // Format time as MM:SS or HH:MM:SS
