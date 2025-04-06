@@ -106,8 +106,8 @@ function TaskCard({ taskId = "123" }) {
     }
     
     return (
-        <div className="flex justify-center">
-            <div className="border-3 border-gray-600 w-96 h-72 bg-[#C6CDFDDE] relative rounded-2xl overflow-hidden">
+        <div className="flex items-center justify-center min-h-screen">
+            <div className="border-3 border-gray-600 w-80 h-72 bg-[#C6CDFDDE] relative rounded-2xl overflow-hidden">
                 <img
                     className="w-56 relative top-20 left-6 z-10"
                     src="/pictures/girl.png"
